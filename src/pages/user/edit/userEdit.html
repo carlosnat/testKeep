@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Editar usuario</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+<ion-content>
+
+    <style>
+        .perfil-header > img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+
+
+    <div class="perfil-header">
+        <span>Perfil</span>
+        <img src="https://orig11.deviantart.net/e14b/f/2013/096/5/2/selena_gomez_icon___twitter_by_myhappinesslaali-d60o40t.png" alt="">
+        <ion-icon name="check"></ion-icon>
+    </div>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Nombres</ion-label>
+            <ion-input [(ngModel)]="user.nombre" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Apellidos</ion-label>
+            <ion-input [(ngModel)]="user.apellido" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+        <ion-label floating>Celular:</ion-label>
+        <ion-input [(ngModel)]="user.celular" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+        <ion-label floating>Correo</ion-label>
+        <ion-input [(ngModel)]="user.correo" type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+        <ion-label floating>Direccion</ion-label>
+        <ion-input [(ngModel)]="user.address" type="text"></ion-input>
+        </ion-item>
+
+        <button ion-button full color="light" (click)="saveChanges()">Check</button>
+
+    </ion-list>
+
+
+  </ion-content>
